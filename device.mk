@@ -492,7 +492,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
-# Telephony
+# Spectrum Manager
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.spectrum.sh
+
+#Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
