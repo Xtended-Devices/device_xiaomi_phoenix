@@ -7,3 +7,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.enable.twsplussho=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
+
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.cpurend.vsync=false
