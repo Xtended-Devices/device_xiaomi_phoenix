@@ -79,4 +79,10 @@
     <string name="lcd_hbm_info">HBM (High Brightness Mode) increases the maximum brightness of the display to improve visibility under sunlight. Increases power consumption.</string>
     <string name="lcd_cabc_info">CABC (Content Adaptive Backlight Control) adjusts display and backlight brightness based on currently shown content, to reduce power consumption without degradation.</string>
 
+     <!-- QS tile title -->
+    <string name="dirac_qs_tile_title">Dirac sound</string>
+
+    <!-- FPS Counter -->
+    <string name="fps_info_title">FPS Counter</string>
+
 </resources>
