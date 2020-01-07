@@ -66,10 +66,6 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">2</integer>
 
-    <!-- The default peak refresh rate for a given device. Change this value if you want to allow
-         for higher refresh rates to be automatically used out of the box -->
-    <integer name="config_defaultPeakRefreshRate">120</integer>
-
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">100.0%</fraction>
@@ -466,4 +462,19 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>13</item>
     </integer-array>
+
+    <!-- The default peak refresh rate for a given device. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Not allow to switch to higher refresh rate when (display, ambient) brightness falls into
+         the region defined by the two arrays -->
+    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
+        <item>-1</item>
+    </integer-array>
+    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
+        <item>-1</item>
+    </integer-array>
+
+    <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">120</integer>
 </resources>
