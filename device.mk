@@ -415,6 +415,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     NotchNoFillOverlay
 
+# Notch style overlay
+PRODUCT_PACKAGES += \
+    NotchNoFillOverlay
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
