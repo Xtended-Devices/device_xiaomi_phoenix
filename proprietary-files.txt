@@ -119,6 +119,10 @@ lib/libxt_native.so
 -product/lib/libsdm-disp-apis.qti.so
 -product/lib64/libsdm-disp-apis.qti.so
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+
 # Perf
 lib64/libqti_performance.so
 lib64/libqti-perfd-client_system.so
