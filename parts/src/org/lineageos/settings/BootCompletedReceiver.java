@@ -26,6 +26,7 @@ import org.lineageos.settings.PowerSaveModeChangeReceiver;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.utils.RefreshRateUtils;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -44,6 +45,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Doze
         DozeUtils.checkDozeService(context);
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
+        ThermalUtils.startService(context);
     }
-
 }
