@@ -7,6 +7,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/phoenix/phoenix-vendor.mk)
 
+# ANXCamera
+$(call inherit-product-if-exists, vendor/aeonax/ANXCamera/anx-vendor.mk)
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
