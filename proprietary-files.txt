@@ -12,14 +12,6 @@ product/lib64/com.qualcomm.qti.ant@1.0.so
 etc/permissions/audiosphere.xml
 framework/audiosphere.jar
 
-# Bluetooth
-lib64/libbtconfigstore.so
-lib/libbtconfigstore.so
-
-# Bluetooth (aptX)
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-
 # Camera
 lib64/libCameraEffectJNI.so
 lib64/libarcsoft_deflicker.so
