@@ -16,7 +16,6 @@
 package org.lineageos.settings.thermal;
 
 import android.annotation.Nullable;
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -26,17 +25,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SectionIndexer;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.preference.PreferenceFragment;
@@ -52,8 +48,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ThermalSettingsFragment extends PreferenceFragment
-        implements AdapterView.OnItemClickListener, ApplicationsState.Callbacks,
-        CompoundButton.OnCheckedChangeListener {
+        implements AdapterView.OnItemClickListener, ApplicationsState.Callbacks {
 
     private AllPackagesAdapter mAllPackagesAdapter;
     private ApplicationsState mApplicationsState;
@@ -65,9 +60,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
     private ListView mUserListView;
 
     private ThermalUtils mThermalUtils;
-
-    private TextView mTextView;
-    private View mSwitchBar;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -85,15 +77,12 @@ public class ThermalSettingsFragment extends PreferenceFragment
         mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
 
         mThermalUtils = new ThermalUtils(getActivity());
-
-        final ActionBar actionBar = getActivity().getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.thermal, container, false);
+        return inflater.inflate(R.layout.thermal_layout, container, false);
     }
 
     @Override
@@ -105,28 +94,9 @@ public class ThermalSettingsFragment extends PreferenceFragment
     public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        boolean serviceEnabled = mThermalUtils.isServiceEnabled(getActivity());
-
         mUserListView = view.findViewById(R.id.thermal_list_view);
-
-        if (serviceEnabled) {
-            mUserListView.setAdapter(mAllPackagesAdapter);
-            mUserListView.setOnItemClickListener(this);
-        }
-
-        mTextView = view.findViewById(R.id.switch_text);
-        mTextView.setText(getString(serviceEnabled ?
-                R.string.switch_bar_on : R.string.switch_bar_off));
-
-        mSwitchBar = view.findViewById(R.id.switch_bar);
-        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
-        switchWidget.setChecked(serviceEnabled);
-        switchWidget.setOnCheckedChangeListener(this);
-        mSwitchBar.setActivated(serviceEnabled);
-        mSwitchBar.setOnClickListener(v -> {
-            switchWidget.setChecked(!switchWidget.isChecked());
-            mSwitchBar.setActivated(switchWidget.isChecked());
-        });
+        mUserListView.setAdapter(mAllPackagesAdapter);
+        mUserListView.setOnItemClickListener(this);
     }
 
 
@@ -234,16 +204,12 @@ public class ThermalSettingsFragment extends PreferenceFragment
         switch (state) {
             case ThermalUtils.STATE_BENCHMARK:
                 return R.drawable.ic_thermal_benchmark;
-            case ThermalUtils.STATE_BROWSER:
-                return R.drawable.ic_thermal_browser;
             case ThermalUtils.STATE_CAMERA:
                 return R.drawable.ic_thermal_camera;
             case ThermalUtils.STATE_DIALER:
                 return R.drawable.ic_thermal_dialer;
             case ThermalUtils.STATE_GAMING:
                 return R.drawable.ic_thermal_gaming;
-            case ThermalUtils.STATE_YOUTUBE:
-                return R.drawable.ic_thermal_youtube;
             case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
@@ -276,11 +242,9 @@ public class ThermalSettingsFragment extends PreferenceFragment
         private final int[] items = {
                 R.string.thermal_default,
                 R.string.thermal_benchmark,
-                R.string.thermal_browser,
                 R.string.thermal_camera,
                 R.string.thermal_dialer,
                 R.string.thermal_gaming,
-                R.string.thermal_youtube
         };
 
         private ModeAdapter(Context context) {
@@ -337,6 +301,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
         public AllPackagesAdapter(Context context) {
             mInflater = LayoutInflater.from(context);
             mModesAdapter = new ModeAdapter(context);
+            mActivityFilter = new ActivityFilter(context.getPackageManager());
         }
 
         @Override
@@ -411,9 +376,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
                     mThermalUtils.writePackage(entry.info.packageName,
                             ThermalUtils.STATE_BENCHMARK);
                     break;
-                case ThermalUtils.STATE_BROWSER:
-                    mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_BROWSER);
-                    break;
                 case ThermalUtils.STATE_CAMERA:
                     mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_CAMERA);
                     break;
@@ -422,9 +384,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
                     break;
                 case ThermalUtils.STATE_GAMING:
                     mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_GAMING);
-                    break;
-                case ThermalUtils.STATE_YOUTUBE:
-                    mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_YOUTUBE);
                     break;
             }
             notifyDataSetChanged();
@@ -506,30 +465,5 @@ public class ThermalSettingsFragment extends PreferenceFragment
             }
             return show;
         }
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
-        mSwitchBar.setActivated(isChecked);
-
-        if (isChecked) {
-            ThermalUtils.startService(getActivity());
-            mUserListView.setAdapter(mAllPackagesAdapter);
-            mUserListView.setOnItemClickListener(this);
-        } else {
-            ThermalUtils.stopService(getActivity());
-            mUserListView.setAdapter(null);
-            mUserListView.setOnItemClickListener(null);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            getActivity().onBackPressed();
-            return true;
-        }
-        return false;
     }
 }
