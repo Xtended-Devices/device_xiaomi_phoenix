@@ -10,7 +10,7 @@ $(call inherit-product, device/xiaomi/phoenix/device.mk)
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Inherit GApps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
