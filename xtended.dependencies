@@ -1,0 +1,44 @@
+[
+  {
+    "remote": "github",
+    "repository": "Xtended-devices/device_xiaomi_sm6150-common",
+    "target_path": "device/xiaomi/sm6150-common",
+    "branch": "xq"
+  },
+  {
+    "remote": "github",
+    "repository": "GZR-Kernels/Optimus_Drunk_Phoenix",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "10.0"
+  },
+  {
+    "remote": "github",
+    "repository": "BigTopKrazies/vendor_xiaomi_phoenix",
+    "target_path": "vendor/xiaomi",
+    "branch": "10.0"
+  },
+  {
+    "remote": "github",
+    "repository": "crdroidandroid/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "10.0"
+  },
+  {
+    "remote": "github",
+    "repository": "sarveshrulz/android_vendor_aeonax_ANXCamera",
+    "target_path": "vendor/aeonax/ANXCamera",
+    "branch": "master"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "GtrCraft/platform_vendor_pixelgapps",
+    "target_path": "vendor/pixelgapps",
+    "branch": "xq"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "GtrCraft/android_vendor_xiaomi-firmware",
+    "target_path": "vendor/xiaomi-firmware",
+    "branch": "10.0"
+  }
+]
