@@ -921,10 +921,6 @@
     <bool name="config_dozePulseTilt">true</bool>
     <bool name="config_dozePulseProximity">true</bool>
 
-    <!-- Whether device supports variable refresh rate -->
-    <bool name="config_hasVariableRefreshRate">true</bool>
-    <integer name="config_defaultVariableRefreshRateSetting">3</integer>
-
     <!-- Smart charging -->
     <bool name="config_smartChargingAvailable">true</bool>
 
