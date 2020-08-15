@@ -90,6 +90,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag
+        
+# Notch style overlay
+PRODUCT_PACKAGES += \
+    NotchNoFillOverlay
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
