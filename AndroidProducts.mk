@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_phoenix.mk
+    $(LOCAL_DIR)/xtended_phoenix.mk
+
+COMMON_LUNCH_CHOICES := \
+    xtended_phoenix-user \
+    xtended_phoenix-userdebug \
+    xtended_phoenix-eng
