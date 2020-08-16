@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "github",
+    "repository": "GZR-Kernels/Optimus_Drunk_Phoenix",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch": "10.0"
+  },
+  {
+    "remote": "github",
+    "repository": "BigTopKrazies/proprietary_vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "branch": "10.0-phoenix"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "GtrCraft/platform_vendor_pixelgapps",
+    "target_path": "vendor/pixelgapps",
+    "branch": "xq"
+  }
+] 
