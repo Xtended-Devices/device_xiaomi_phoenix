@@ -17,8 +17,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCamera,org.codeaurora.snapcam \
-    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.google.android.GoogleCamera
+    persist.camera.gyro.disable=0 \
+    persist.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # CNE
 PRODUCT_PRODUCT_PROPERTIES += \
