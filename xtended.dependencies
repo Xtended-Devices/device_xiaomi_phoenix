@@ -16,5 +16,11 @@
     "repository": "GtrCraft/platform_vendor_pixelgapps",
     "target_path": "vendor/pixelgapps",
     "branch": "xq"
+  },
+  {
+    "remote": "github",
+    "repository": "sarveshrulz/android_vendor_aeonax_ANXCamera",
+    "target_path": "vendor/aeonax/ANXCamera",
+    "branch": "vendor-overlay"
   }
 ] 
