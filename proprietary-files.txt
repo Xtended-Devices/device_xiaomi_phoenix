@@ -13,10 +13,13 @@ etc/permissions/audiosphere.xml
 framework/audiosphere.jar
 
 # Camera
+lib/libcameraservice.so
+lib/vendor.qti.hardware.camera.device@1.0.so
 lib64/libCameraEffectJNI.so
 lib64/libarcsoft_deflicker.so
 lib64/libarcsoft_single_chart_calibration.so
 lib64/libarcsoft_wideselfie.so
+lib64/libcameraservice.so
 lib64/libcamera_960_mpbase.so
 lib64/libcamera_arcsoft_beautyshot.so
 lib64/libcamera_arcsoft_handgesture.so
@@ -36,6 +39,7 @@ lib64/libjni_wideselfie.so
 lib64/librefocus.so
 lib64/libqvrcamera_client.qti.so
 lib64/libtrueportrait.so
+lib64/vendor.qti.hardware.camera.device@1.0.so
 
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
