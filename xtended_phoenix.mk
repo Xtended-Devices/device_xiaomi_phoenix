@@ -32,7 +32,3 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
-
-BUILD_FINGERPRINT := POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.11.0.QGHINXM:user/release-keys
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
