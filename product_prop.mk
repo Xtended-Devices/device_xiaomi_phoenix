@@ -126,6 +126,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # RCS
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.rcs.supported=0
+    
+# Recorder
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.audio.fluence.voicerec=true \
+    persist.vendor.audio.fluence.audiorec=true \
+    ro.vendor.audio.sdk.fluencetype=fluence
 
 # Wireless display
 PRODUCT_PRODUCT_PROPERTIES += \
