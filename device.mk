@@ -87,6 +87,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc
 
+# Kernel
+LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+LOCAL_DTB := $(LOCAL_PATH)/prebuilt/dtb
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel \
+    $(LOCAL_DTB):dtb.img
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
