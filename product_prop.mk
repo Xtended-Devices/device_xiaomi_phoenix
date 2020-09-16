@@ -132,6 +132,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.audiorec=true \
     ro.vendor.audio.sdk.fluencetype=fluence
+    
+# VoLTE
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
 # Wireless display
 PRODUCT_PRODUCT_PROPERTIES += \
