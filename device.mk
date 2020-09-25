@@ -114,6 +114,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
+# Lights
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.light@2.0-service.rc \
+    $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/android.hardware.light@2.0-service
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
