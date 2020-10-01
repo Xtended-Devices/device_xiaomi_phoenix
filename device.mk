@@ -103,12 +103,12 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_phoenix
 
 # NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    NfcNci \
-    SecureElement \
-    Tag
+#PRODUCT_PACKAGES += \
+#    com.android.nfc_extras \
+#    com.gsma.services.nfc \
+#    NfcNci \
+#    SecureElement \
+#    Tag
 
 # Notch style overlay
 PRODUCT_PACKAGES += \
