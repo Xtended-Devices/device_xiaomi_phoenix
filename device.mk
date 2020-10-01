@@ -127,12 +127,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/android.hardware.power@1.2-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/android.hardware.power@1.2-service
 
 # NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    NfcNci \
-    SecureElement \
-    Tag
+#PRODUCT_PACKAGES += \
+#    com.android.nfc_extras \
+#    com.gsma.services.nfc \
+#    NfcNci \
+#    SecureElement \
+#    Tag
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
