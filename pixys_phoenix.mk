@@ -6,8 +6,11 @@
 
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
+# Inherit some common PixysOS stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_phoenix
+PRODUCT_NAME := pixys_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi K30
