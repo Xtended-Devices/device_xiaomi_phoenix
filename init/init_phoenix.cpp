@@ -68,9 +68,9 @@ constexpr const char *BUILD_DESCRIPTION[] = {
 };
 
 constexpr const char *BUILD_FINGERPRINT[] = {
-    "google/sunfish/sunfish:11/RP1A.200720.010/6722941:user/"
+    "google/sunfish/sunfish:11/RP1A.201005.006/6828489:user/"
     "release-keys",
-    "google/sunfish/sunfish:11/RP1A.200720.010/6722941:user/"
+    "google/sunfish/sunfish:11/RP1A.201005.006/6828489:user/"
     "release-keys",
 };
 
