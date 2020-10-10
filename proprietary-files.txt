@@ -8,6 +8,10 @@ product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
+# Bluetooth (aptX) - from coral-user 10 QQ3A.200805.001 6578210 release-keys
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+
 # CarrierConfig | from  Coral RPB2.200611.009-6625208-release-keys
 product/etc/CarrierSettings/airtel_in.pb|e48ca8834f30e74a1a1a42d1041bb97fdf0f5b58
 product/etc/CarrierSettings/att5g_us.pb|98336eb2c02109e2a34daef9a45e86448dd9a1cd
@@ -147,3 +151,55 @@ product/framework/QtiTelephonyServicelibrary.jar
 
 # Telephony (qti-telephony-common) - from LA.UM.8.9.r1-08300-SM6xx.0
 product/framework/qti-telephony-common.jar|411e1eda313b38205dd89a012d898f74e2ddaee0
+
+# WiFi Display
+bin/wfdservice
+etc/init/wfdservice.rc
+etc/wfdconfigsink.xml
+-framework/WfdCommon.jar
+lib64/libFileMux.so
+lib64/libmmosal.so
+lib64/libmmparser_lite.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
+lib64/libwfdclient.so
+lib64/libwfdcommonutils.so
+lib64/libwfdconfigutils.so
+lib64/libwfdmminterface.so
+lib64/libwfdmmsink.so
+lib64/libwfdnative.so
+lib64/libwfdrtsp.so
+lib64/libwfdsinksm.so
+lib64/libwfdsm.so
+lib64/libwfduibcinterface.so
+lib64/libwfduibcsink.so
+lib64/libwfduibcsinkinterface.so
+lib64/libwfduibcsrc.so
+lib64/libwfduibcsrcinterface.so
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/libFileMux.so
+lib/libmmosal.so
+lib/libmmparser_lite.so
+lib/libmmrtpdecoder.so
+lib/libmmrtpencoder.so
+lib/libwfdaac.so
+lib/libwfdavenhancements.so
+lib/libwfdclient.so
+lib/libwfdcommonutils.so
+lib/libwfdconfigutils.so
+lib/libwfdmminterface.so
+lib/libwfdmmsink.so
+lib/libwfdmmsrc_system.so
+lib/libwfdrtsp.so
+lib/libwfdservice.so
+lib/libwfdsinksm.so
+lib/libwfdsm.so
+lib/libwfduibcinterface.so
+lib/libwfduibcsink.so
+lib/libwfduibcsinkinterface.so
+lib/libwfduibcsrc.so
+lib/libwfduibcsrcinterface.so
+-priv-app/WfdService/WfdService.apk
+product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+>>>>>>> 2b7712a... phoenix: Add Bluetooth AptX Blobs from coral
