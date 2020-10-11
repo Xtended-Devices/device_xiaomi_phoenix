@@ -2,4 +2,4 @@
 ro.netflix.bsp_rev=Q6150-17263-1
 
 # Set stock DPI
-ro.sf.lcd_density=440
+ro.sf.lcd_density=420
