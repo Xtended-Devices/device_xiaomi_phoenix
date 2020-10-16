@@ -107,11 +107,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.light@2.0-service.rc \
     $(LOCAL_PATH)/prebuilt/android.hardware.light@2.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/android.hardware.light@2.0-service
 
-# Power
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/android.hardware.power@1.2-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.power@1.2-service.rc \
-    $(LOCAL_PATH)/prebuilt/android.hardware.power@1.2-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/android.hardware.power@1.2-service
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
