@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
+import android.content.res.Configuration;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -52,6 +53,12 @@ public class ThermalService extends Service {
         }
     };
 
+        public void onReceive(Context context, Intent intent) {
+            mPreviousApp = "";
+            mThermalUtils.resetTouchModes();
+        }
+    };
+
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
@@ -71,6 +78,12 @@ public class ThermalService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return null;
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mThermalUtils.updateTouchRotation();
     }
 
     private void registerReceiver() {
