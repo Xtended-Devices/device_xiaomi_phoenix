@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 
 import org.lineageos.settings.dirac.DiracUtils;
-import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.utils.RefreshRateUtils;
 
@@ -32,11 +31,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Refresh rate
         RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
 
-        // Doze
         DiracUtils.initialize(context);
-        DozeUtils.checkDozeService(context);
-        // Force apply our default value for doze if it is not set.
-        DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
         ThermalUtils.startService(context);
     }
 }

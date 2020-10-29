@@ -27,9 +27,6 @@
     -->
     <bool name="config_supportsRefreshRateSwitch">false</bool>
 
-    <!-- Device specific doze package -->
-    <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
-
   <!-- Battery Health -->
   <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
   <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
