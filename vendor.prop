@@ -224,3 +224,6 @@ persist.dbg.wfc_avail_ovr=1
 wifi.aware.interface=wifi-aware0
 wifi.interface=wlan0
 persist.dbg.wfc_avail_ovr=1
+
+# Hack for Youtube
+sys.display-size=3840x2160
