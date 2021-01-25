@@ -43,6 +43,7 @@ ODM_MANIFEST_PHOENIX_FILES := $(DEVICE_PATH)/manifest_phoenix.xml
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 TARGET_KERNEL_CONFIG := vendor/lineage_phoenix_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # NFC
 TARGET_USES_NQ_NFC := true
