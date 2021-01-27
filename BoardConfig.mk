@@ -199,6 +199,9 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Memory Config
+MALLOC_SVELTE := true
+
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp

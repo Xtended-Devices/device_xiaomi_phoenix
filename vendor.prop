@@ -175,6 +175,7 @@ vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
 persist.sys.sf.color_mode=0
 persist.sys.sf.native_mode=0
+debug.hwui.renderer=skiavk
 
 # Keystore
 ro.hardware.keystore_desede=true
