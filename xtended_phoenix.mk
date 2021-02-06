@@ -23,9 +23,9 @@ PRODUCT_MODEL := POCO X2
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DISC="sunfish-user 11 RQ1A.210105.002 6985033 release-keys"
+    PRIVATE_BUILD_DISC="sunfish-user 11 RQ1A.210205.004 7038034 release-keys"
 
-BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys
+BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
