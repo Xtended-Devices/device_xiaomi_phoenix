@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository": "GZR-Kernels/Optimus_Drunk_Phoenix",
+    "target_path": "kernel/xiaomi/phoenix",
+    "branch": "11.0"
+  },
+  {
+    "remote": "github",
+    "repository": "BigTopKrazies/vendor_xiaomi_phoenix",
+    "target_path": "vendor/xiaomi/phoenix",
+    "branch": "11.0"
+  }
+] 
