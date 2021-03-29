@@ -1075,3 +1075,8 @@ service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
     class hal
     user system
     group system input
+
+#gpu cpu boost up
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 307200
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 850000000
