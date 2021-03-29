@@ -163,6 +163,9 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
