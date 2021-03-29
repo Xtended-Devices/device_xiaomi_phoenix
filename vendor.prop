@@ -216,3 +216,6 @@ persist.vendor.ims.disableQXDMLogs=1
 
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
+
+# Hack for Youtube
+sys.display-size=3840x2160
