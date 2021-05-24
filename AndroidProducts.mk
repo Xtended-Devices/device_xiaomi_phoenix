@@ -5,4 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_phoenix.mk
+    $(LOCAL_DIR)/xtended_phoenix.mk
+
+COMMON_LUNCH_CHOICES := \
+    xtended_phoenix-userdebug
