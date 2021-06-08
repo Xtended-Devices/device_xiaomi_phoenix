@@ -537,7 +537,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service
 
 PRODUCT_COPY_FILES += \
-$(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin
+     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
