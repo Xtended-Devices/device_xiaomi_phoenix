@@ -14,23 +14,20 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package org.lineageos.settings.fps;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Parcel;
-import android.os.RemoteException;
-import android.os.ServiceManager;
+import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-import org.lineageos.settings.utils.RefreshRateUtils;
+public class FPSActivity extends PreferenceActivity {
 
-public class EarlyStartReceiver extends BroadcastReceiver {
+    private static final String TAG_FPS = "fps";
 
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        // Set FPS to 120hz on lock screen so that screen isn't laggy until .BootCompletedReceiver kicks in
-        // Note that we do not have data access at this time (direct boot)
-        RefreshRateUtils.setFPS(4);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new FPSSettingsFragment(), TAG_FPS).commit();
     }
 }
