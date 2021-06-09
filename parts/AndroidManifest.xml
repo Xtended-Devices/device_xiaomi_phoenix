@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.lineageos.settings"
-    android:versionCode="2"
-    android:versionName="2.0"
+    android:versionCode="3"
+    android:versionName="3.0"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
@@ -10,13 +10,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-
-    <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="30"/>
 
     <application
         android:allowBackup="true"
@@ -29,27 +24,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name=".PowerSaveModeChangeReceiver">
-            <intent-filter>
-                <action android:name="android.os.action.POWER_SAVE_MODE_CHANGED" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name=".DevicePreferenceActivity"
-            android:label="@string/device_specific_settings_title"
-            android:theme="@style/Theme.Main">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/device_specific_settings_summary" />
-        </activity>
 
         <activity
             android:name=".doze.DozeSettingsActivity"
@@ -82,62 +56,6 @@
                        android:resource="@string/dirac_summary" />
         </activity>
 
-        <activity
-            android:name=".thermal.ThermalActivity"
-            android:label="@string/thermal_title"
-            android:icon="@drawable/ic_thermal_settings"
-            android:theme="@style/Theme.Main">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.system" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/thermal_summary" />
-            <meta-data
-                android:name="com.android.settings.order"
-                android:value="1" />
-        </activity>
-
-        <activity
-            android:name=".speaker.ClearSpeakerActivity" 
-            android:label="@string/clear_speaker_title"
-            android:theme="@style/Theme.Main">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.sound" />
-        </activity>
-
-        <service
-            android:name=".thermal.ThermalService"
-            android:permission="ThermalService">
-        </service>
-
-        <activity
-            android:name=".fps.FPSActivity"
-            android:label="@string/fps_title"
-            android:theme="@style/Theme.Main">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/fps_summary" />
-            <meta-data
-                android:name="com.android.settings.order"
-                android:value="1" />
-        </activity>
-
-        <service
-            android:name=".fps.FPSService"
-            android:permission="FPService">
-        </service>
     </application>
 </manifest>
+
