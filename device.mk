@@ -13,7 +13,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/phoenix/phoenix-vendor.mk)
-$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+#$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Include PSU if synced
 $(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     libgui_vendor \
     libxml2 \
-    GCamGOPrebuilt \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
