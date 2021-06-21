@@ -114,6 +114,11 @@ on property:ro.boot.dp=0x0 && property:ro.boot.secureboot=1
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
+
+    # Allow system to adjust haptic level directly
+    chown system system /sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/ulevel
+    chmod 0664 /sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/ulevel
+
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
     chown system system /proc/tp_selftest
