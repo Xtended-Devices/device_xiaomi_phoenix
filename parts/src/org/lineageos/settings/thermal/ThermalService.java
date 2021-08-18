@@ -23,11 +23,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-<<<<<<< HEAD
 import android.os.Handler;
-=======
 import android.content.res.Configuration;
->>>>>>> eb9da880... surya: parts: add touchscreen/gaming profiles
 import android.os.IBinder;
 import android.util.Log;
 
@@ -47,18 +44,14 @@ public class ThermalService extends Service {
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-<<<<<<< HEAD
             final String action = intent.getAction();
             if (Intent.ACTION_SCREEN_ON.equals(action)) {
                 mHandler.postDelayed(mActivityRunnable, 500);
             } else {
                 mHandler.removeCallbacks(mActivityRunnable);
             }
-=======
             mPreviousApp = "";
-            mThermalUtils.setDefaultThermalProfile();
             mThermalUtils.resetTouchModes();
->>>>>>> eb9da880... surya: parts: add touchscreen/gaming profiles
         }
     };
 
