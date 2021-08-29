@@ -69,11 +69,11 @@
     <string name="dirac_preset_metal">Metal</string>
     <string name="dirac_preset_bass_booster">Bass Booster</string>
 
-    <!-- Haptic Level Settings -->
-    <string name="haptic_title">Haptic feedback</string>
-    <string name="haptic_level_title">Feedback strength level</string>
-    <string name="haptic_level_summary">Adjust the strength level of overall haptic feedback</string>
-    <string name="haptic_level_summary_incompatible">Your kernel did not support custom QTI Haptic Strength Level</string>
+     <!-- Haptic Level Settings -->
+     <string name="haptic_title">Haptic feedback</string>
+     <string name="haptic_level_title">Level</string>
+     <string name="haptic_level_summary">The amount of vibration intensity</string>
+     <string name="haptic_level_summary_incompatible">Kernel did not support this feature</string>
 
     <!-- LCD Features -->
     <string name="lcd_features_title">LCD features</string>
