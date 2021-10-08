@@ -512,6 +512,7 @@ PRODUCT_PACKAGES += \
     init.qti.dcvs.sh \
     qca6234-service.sh \
     init.qcom.factory.rc \
+    init.logcat.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
