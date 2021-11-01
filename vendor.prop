@@ -219,3 +219,7 @@ wifi.aware.interface=wifi-aware0
 
 # Hack for Youtube
 sys.display-size=3840x2160
+
+# Refresh rate
+debug.sf.frame_rate_multiple_threshold=144
+
