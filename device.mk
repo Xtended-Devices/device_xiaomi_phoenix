@@ -1,3 +1,4 @@
+BUILD _WITH_GAPPS=true
 #
 # Copyright (C) 2020 The LineageOS Project
 #
