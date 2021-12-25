@@ -7,10 +7,10 @@
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := superior_phoenix
+PRODUCT_NAME := xtended_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X2
@@ -20,8 +20,8 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 DEVICE_MAINTAINER := Ankan
-BUILD_WITH_GAPPS := true
-SUPERIOR_BUILD_TYPE := OFFICIAL
+WITH_GAPPS=true
+XTENDED_BUILD_TYPE := OFFICIAL
 
 # Charging Animation
 TARGET_INCLUDE_PIXEL_CHARGER := true

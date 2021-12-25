@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_phoenix.mk
+    $(LOCAL_DIR)/xtended_phoenix.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_phoenix-userdebug
+    xtended_phoenix-userdebug
