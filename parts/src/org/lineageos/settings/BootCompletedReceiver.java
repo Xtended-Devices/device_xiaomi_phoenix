@@ -27,6 +27,7 @@ import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.utils.RefreshRateUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -45,5 +46,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Force apply our default value for doze if it is not set.
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
         ThermalUtils.startService(context);
+
+        // Refresh rate
+        RefreshUtils.startService(context);
     }
 }
