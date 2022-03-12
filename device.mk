@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-parts.xml
 
+PRODUCT_PRODUCT_PROPERTIES += \
+     persist.disp.hbm_mode=0 \
+     persist.lcd.cabc_mode=1
+
 # Display/Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
