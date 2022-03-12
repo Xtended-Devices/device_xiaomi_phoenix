@@ -1,3 +1,4 @@
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 BUILD _WITH_GAPPS=true
 #
 # Copyright (C) 2020 The LineageOS Project
@@ -37,11 +38,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
-    com.dsi.ant.antradio_library \
     com.dsi.ant@1.0.vendor
-
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -182,7 +179,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
+    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-parts.xml
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
