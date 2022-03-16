@@ -48,8 +48,6 @@ public class ThermalService extends Service {
                 mHandler.postDelayed(mActivityRunnable, 500);
             } else {
                 mHandler.removeCallbacks(mActivityRunnable);
-                mPreviousApp = "";
-                mThermalUtils.setDefaultThermalProfile();
             }
         }
     };
@@ -62,17 +60,6 @@ public class ThermalService extends Service {
         mHandler.postDelayed(mActivityRunnable, 500);
         registerReceiver();
         super.onCreate();
-    }
-
-    @Override
-    public void onDestroy() {
-        if (DEBUG) Log.d(TAG, "Destroying service");
-        unregisterReceiver();
-        mHandler.removeCallbacks(mActivityRunnable);
-        mThermalUtils.setDefaultThermalProfile();
-        mThermalUtils = null;
-        mActivityRunnable = null;
-        super.onDestroy();
     }
 
     @Override
@@ -91,10 +78,6 @@ public class ThermalService extends Service {
         filter.addAction(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         this.registerReceiver(mIntentReceiver, filter);
-    }
-
-    private void unregisterReceiver() {
-        this.unregisterReceiver(mIntentReceiver);
     }
 
     private class ActivityRunnable implements Runnable {
