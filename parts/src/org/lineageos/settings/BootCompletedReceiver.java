@@ -39,14 +39,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         filter.addAction(PowerManager.ACTION_POWER_SAVE_MODE_CHANGED);
         context.getApplicationContext().registerReceiver(receiver, filter);
 
-        // Dirac
-        DiracUtils.initialize(context);
-
         // Doze
+        DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
+        // Force apply our default value for doze if it is not set.
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
-
-        // Thermal Profiles
         ThermalUtils.initialize(context);
     }
 }
